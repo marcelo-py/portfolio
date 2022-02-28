@@ -67,14 +67,18 @@
                 {%endif%}
             {%endfor%}       
         </div>
-        <form id="mandamsg" action="{% url 'index' %}" method="post">
-            {% csrf_token %}
-            {{ usuario }}
-            <button type="submit">Enviar</button>
-            {%if fform.is_valid == 'POST'%}
-                <p>mensagem envasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssida!</p>
-            {%endif%}
-        </form>
+
+        <div class="coisasdamsg">
+            <form id="mandamsg" action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                {{ usuario }}
+                <button type="submit">Enviar</button>
+                {%if fform.is_valid == 'POST'%}
+                    <p>mensagem envasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssida!</p>
+                {%endif%}
+            </form>
+        </div>
+        
     </div>
     
 {%endblock%}

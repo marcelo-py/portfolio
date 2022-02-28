@@ -23,6 +23,9 @@
             margin: 0;
             padding: 0;
         }
+        header{
+            margin-top: 2%;
+        }
         body{
             background-image: linear-gradient(45deg, #b55fee, rgb(156, 38, 156), #892CDC, #52057B);
             background-size: 1050% 1050%;
@@ -119,22 +122,6 @@
             padding: 10px;
             font-size: 17px;
         }
-        #mandamsg{
-            text-align: right;
-        }
-        input{
-            margin-left: 85%;
-        }
-        #id_mensagem{
-            width: 320px;
-            margin-left: 74%;
-        }
-        button{
-            background-color: #b55fee;
-            box-shadow: 0 0 5px black;
-            color: rgb(43, 6, 73);
-            width: 50px;
-        }
         .links{
             text-decoration: none;
             color: rgb(0, 89, 255);
@@ -146,6 +133,28 @@
         }
         .contato_link{
             display: inline;
+        }
+
+        label{
+            margin-left: 50%;
+        }
+        input{
+            width: 315px;;
+        }
+        .coisasdamsg{
+            text-align: right;
+        }
+        button{
+            width: 50px;
+            height: 30px;
+            font-size: 15px;
+            position: relative;
+            display: flow-root;
+            left: 87%;
+        }
+
+        #id_usuario{
+            width: 120px;
         }
         @keyframes cores{
             0%{
@@ -164,57 +173,69 @@
             }
         }
         @media (min-width: 50px) and (max-width: 900px){
-            #sobre, #projetos, #contatos{
+            #projetos, #contatos{
                 width: 90vw;
                 height: 90vw;
+            }
+            #sobre{
+                width: 90vw;
+                height: 112vw;
+
             }
             #mensagens{
                 width: 90vw;
                 max-height: 900px;
+
             }
             h2{
-                font-size: 40px;
+                font-size: 9vw;
             }
             .descricao{
-                font-size: 20px;
+                font-size: 17px;
                 width: 95%;
                 word-wrap: break-word;
             }
             #mensage{
                 font-size: 9vw;
             }
-            input{
-                margin-left: 0%;
-            }
-            #id_mensagem{
-                width: 75%;
-                margin-left: 0px;
-                height: 5vw;
-                font-size: 5vw;
-            }
-            #id_usuario{
-                height: 5vw;
-                font-size: 4vw;
-                width: 80%;
-                text-align: center;
-            }
-            label{
-                font-size: 5vw;
-            }
-            button{
-                width: 14vw;
-                height: 9vw;
-                font-size: 4vw;
-            }
-            #mandamsg{
-                text-align: center;
-            }
+
             address{
                 font-size: 5vw;
             }
             .contatos{
                 width: 15vw;
                 height: 15vw;
+            }
+            h1{
+                margin-top: 2%;
+            }
+            .coisasdamsg{
+                text-align: center;
+            }
+            #mandamsg{
+                width: 90%;
+                margin: 0%;
+            }
+            label{
+                margin-left: 0%;
+                margin-left: 20%;
+                font-size: 9vw;
+                margin: 0%;
+            }
+            input{
+                font-size: 7vw;
+                width: 80vw;
+                margin: 0%;
+            }
+            button{
+                width: 20vw;
+                height: 10vw;
+                font-size: 6vw;
+                position: relative;
+                left: 50%;
+            }
+            #id_usuario{
+                width: 50vw;
             }
         }
     </style>
