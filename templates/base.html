@@ -1,0 +1,227 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%include 'parciais/head.html'%}
+    <title>{%block 'titulo'%}{%endblock%}</title>
+    <style>
+        @font-face{
+            font-family: 'Dripping';
+            src: url("{% static 'fonts/DrippingCool.ttf' %}")
+            format('truetype');
+            font-weight: 0px;
+            
+        }
+        @font-face {
+            font-family: 'start';
+            src: url("{% static 'fonts/PressStart2P-Regular.ttf' %}")
+            format('truetype');
+            font-weight: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(45deg, #b55fee, rgb(156, 38, 156), #892CDC, #52057B);
+            background-size: 1050% 1050%;
+            animation: cores 15s ease-in infinite;
+            width: 100%;
+            height: 100%;
+            /*url("{%static 'imagens/imagem_do_fundo.jpg' %}");*/
+        }
+        h1{
+            font-family: 'Dripping';
+            margin: 0%;
+            font-size: 90px;
+            display: inline-block;
+            color: rgb(36, 5, 36);
+            text-shadow: 1px 1px 1px rgba(181, 131, 201, 0.884);
+        }
+        #sobre, #projetos, #contatos{
+            box-shadow: 2px 2px 3px rgba(100, 69, 114, 0.671);
+            width: 330px;
+            height: 300px;        
+            margin: 10px;
+            border-radius: 15px;
+            text-align: center;
+            overflow: hidden;
+        }
+        h2{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'start';
+            margin: 5px;
+        }
+        #conteudo{
+            text-align: center;
+        }
+
+        #sobre, #contatos{
+            background-color: #43314dd3;
+        }
+        #projetos{
+            background-color: #3b1c49ad;
+        }
+        .descricao{
+            font-family: 'start';
+            margin: 10px;
+            display: inline-block;
+            width: 95%;
+            word-wrap: break-word;
+            font-size: 15px;
+            text-align: left;
+            
+        }
+        span{
+            display: inline-block;
+        }
+        
+        #l1, #l2, #l3 {
+            width: 120px;
+            height: 120px;
+        }
+
+        span > #l1{
+            display: none;
+        }
+        span > #l2{
+            display: none;
+        }
+        span > #l3{
+            display: none;
+        }
+ 
+        span:hover > #l1{
+            display: inline-block;
+        }
+        span:hover > #l2{
+            display: inline-block;
+        }
+        span:hover > #l3{
+            display: inline-block;
+        }
+        #mensagens{
+            background-color: #1e032ce3;
+            width: 300px;
+            max-height: 430px;
+            display: inline-block;
+            overflow-y: scroll;
+            margin: 5px;
+            position: relative;
+        }
+        #mensage{
+            word-wrap: break-word;
+            color: green;
+            box-shadow: 0 0 6px rgb(10, 1, 12);
+            text-align: justify;
+            padding: 10px;
+            font-size: 17px;
+        }
+        #mandamsg{
+            text-align: right;
+        }
+        input{
+            margin-left: 85%;
+        }
+        #id_mensagem{
+            width: 320px;
+            margin-left: 74%;
+        }
+        button{
+            background-color: #b55fee;
+            box-shadow: 0 0 5px black;
+            color: rgb(43, 6, 73);
+            width: 50px;
+        }
+        .links{
+            text-decoration: none;
+            color: rgb(0, 89, 255);
+        }
+        .contatos{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+        .contato_link{
+            display: inline;
+        }
+        @keyframes cores{
+            0%{
+               background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        @media (min-width: 100px) and (max-width: 579px) {
+            h1{
+                font-size: 17vw;
+            }
+        }
+        @media (min-width: 50px) and (max-width: 900px){
+            #sobre, #projetos, #contatos{
+                width: 90vw;
+                height: 90vw;
+            }
+            #mensagens{
+                width: 90vw;
+                max-height: 900px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            .descricao{
+                font-size: 20px;
+                width: 95%;
+                word-wrap: break-word;
+            }
+            #mensage{
+                font-size: 9vw;
+            }
+            input{
+                margin-left: 0%;
+            }
+            #id_mensagem{
+                width: 75%;
+                margin-left: 0px;
+                height: 5vw;
+                font-size: 5vw;
+            }
+            #id_usuario{
+                height: 5vw;
+                font-size: 4vw;
+                width: 80%;
+                text-align: center;
+            }
+            label{
+                font-size: 5vw;
+            }
+            button{
+                width: 14vw;
+                height: 9vw;
+                font-size: 4vw;
+            }
+            #mandamsg{
+                text-align: center;
+            }
+            address{
+                font-size: 5vw;
+            }
+            .contatos{
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {%block 'conteudo'%}
+    {%endblock%}
+</body>
+</html>
