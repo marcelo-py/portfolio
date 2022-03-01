@@ -12,17 +12,12 @@
             <div id="sobre">
                 <h2>sobre mim</h2>
                 <p class="descricao">
-                    <ul class="descricao">
-                        <li>Me chamo Marcelo</li>
-                        <br>
-                        <li>22 anos, de São Luís-MA</li>
-                        <br>
-                        <li>No 3º periodo de Redes de Computadores no IFMA-São João dos Patos</li>
-                        <br>
-                        <li>Possuo conhecimentos em Python, MySQL e me aventuro no front-end</li>
-                    
-                    </ul>
-                    
+                    Me chamo Marcelo
+                    tenho 22 anos, de São Luís-MA
+                    <br>
+                    No 3º periodo de Redes de Computadores no IFMA-São João dos Patos
+                    <br>
+                    Possuo conhecimentos em Python, MySQL e me aventuro no front-end
                 </p>
                      
             </div>
@@ -50,10 +45,7 @@
                 <h2>contatos</h2>
                 <a class="contato_link" href="https://www.facebook.com/marcelo.jovi.7"><img class="contatos" src="{% static 'imagens/facebook_icone.png' %}" alt=""></a>
                 <a class="contato_link" href="https://www.instagram.com/marcell0.o"><img class="contatos" src="{% static 'imagens/insta_icone.png' %}" alt=""></a>
-                <a class="contato_link" href="https://github.com/marcelo-py"><img class="contatos" src="{% static 'imagens/github_icone.png'%}" alt=""></a>
-                <p>
-                    <img style="height: 20px; width: 20px; margin-top: 40%; margin-bottom: 0%;" class="contatos" src="{% static 'imagens/email_icone.png' %} " alt=""><address>marcelo.araujo.999s@gmail.com</address>
-                </p>      
+                <a class="contato_link" href="https://github.com/marcelo-py"><img class="contatos" src="{% static 'imagens/github_icone.png'%}" alt=""></a>      
             </div>
             <img id="l3" src="{% static 'imagens/Lgif.gif' %}" alt="">
         </span>
@@ -62,7 +54,10 @@
             {%for mensagem in mensagens%}
                 {% if mensagem.mensagem %}
                     <p id="mensage">
-                        <b>{{ mensagem.usuario }}:</b> <code>{{ mensagem.mensagem }}</code> 
+                        <b>{{ mensagem.usuario }}:</b>
+                        <code>{{ mensagem.mensagem }}
+                            <span id="data">({{ mensagem.data_da_mensagem|date:'d/m/Y' }})</span>  
+                        </code> 
                     </p>
                 {%endif%}
             {%endfor%}       
