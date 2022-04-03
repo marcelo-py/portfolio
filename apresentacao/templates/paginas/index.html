@@ -30,16 +30,14 @@
                 <p class="descricao">
                     Ando fazendo uns projetos médio solo
                     (nada postado no repositorio ainda)
-                    mas se quiser da uma olhada nos projetos pequenos que fiz usando apenas Python
-                    <a class="links" target="_blank" rel="external" href="https://github.com/marcelo-py">segue o link</a> 
-
+                    mas se quiser da uma olhada nos meus projetos pequenos que fiz usando apenas Python
+                    <a class="links" target="_blank" rel="external" href="https://github.com/marcelo-py">segue o link</a>
+                    <span style="margin-top: 10px;">uma livraria que fiz usando Django, HTML e CSS <a class="links" href="https://donos-do-livro.herokuapp.com">donos-do-livro.herokuapp.com</a></span>
                 </p>
-                
             </div>
             <img id="l2" src="{% static 'imagens/morcegobatman.gif' %}" alt="">
         </span>
 
-        
         <span>
             <div id="contatos">
                 <h2>contatos</h2>
@@ -50,7 +48,7 @@
             <img id="l3" src="{% static 'imagens/Lgif.gif' %}" alt="">
         </span>
         <div id="mensagens">
-            <h2 style="text-shadow: 0 0 1px white;">mensagens anonimas</h2>
+            <h2 id="h2damensagem">mensagens anônimas</h2>
             {%for mensagem in mensagens%}
                 {% if mensagem.mensagem %}
                     <p id="mensage">
@@ -68,9 +66,6 @@
                 {% csrf_token %}
                 {{ usuario }}
                 <button type="submit">Enviar</button>
-                {%if fform.is_valid == 'POST'%}
-                    <p>mensagem envasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssida!</p>
-                {%endif%}
             </form>
         </div>
         
